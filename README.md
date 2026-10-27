@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MediCare Local
 
 A clinic management app that runs entirely on your own machine: patients find doctors and book appointments, doctors run consultations and issue prescriptions, and an administrator manages the clinic. All data is dummy data. There is no Docker, cloud service, SMS or payment integration.
@@ -209,3 +210,7 @@ The second call returns HTTP 409 with `{"success":false,"message":"Doctor is alr
 
 - `docs/API.md` lists every endpoint, who may call it, and what it returns.
 - `docs/INTERVIEW_GUIDE.md` explains the design decisions in the way you would explain them in a technical interview.
+=======
+# fullstack-medicare
+fullstack-medicare
+>>>>>>> origin/main
