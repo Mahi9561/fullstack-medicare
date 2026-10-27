@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/*
+  Design tokens.
+  Paper, ink and pine come from clinic stationery: cool off-white chart paper, blue-black ink, and a
+  single deep green for actions. Status colors (blue, green, grey, red, amber) are used only to
+  show appointment state, never as decoration.
+*/
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bricolage Grotesque", "Public Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f4f6f3;
+  --color-ink: #14212b;
+  --color-ink-soft: #55656f;
+  --color-rule: #dce3de;
+
+  --color-pine-50: #e8f3ef;
+  --color-pine-100: #cfe6de;
+  --color-pine-200: #a3cdbf;
+  --color-pine-400: #3f9b82;
+  --color-pine-600: #0e6b55;
+  --color-pine-700: #0a5644;
+  --color-pine-800: #084538;
+}
+
+@layer base {
+  html {
+    font-size: 15px;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-pine-600);
+    outline-offset: 2px;
+  }
+  input[type="date"],
+  input[type="time"] {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
